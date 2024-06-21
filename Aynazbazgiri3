@@ -1,0 +1,32 @@
+public class AynazBazgiri3 {
+
+    // Tabe barai shomaresh fazai khali dar yek reshte
+    public static int countSpaces(String str) {
+        int spaceCount = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ') {
+                spaceCount++;
+            }
+        }
+        return spaceCount;
+    }
+
+    // Tabe barai jost va joi yek reshte dar rshte dige
+    public static int searchString(String str1, String str2) {
+        return str1.indexOf(str2);
+    }
+
+    public static void main(String[] args) {
+        String str1 = "This is a string with spaces.";
+        String str2 = "string";
+
+        int spaceCount = countSpaces(str1);
+        System.out.println(" tedad fazai khali dar rshte  : " + spaceCount);
+
+        int index = searchString(str1, str2);
+        if (index != -1) {
+            System.out.println("rshte \"" + str2 + "\" dar reshte  \"" + str1 + "\"  dar moghiat " + index + "  peida shod.");
+        } else {
+            System.out.println("rshte \"" + str2 + "\" dar rshte  \"" + str1 + "\"  peida nashd.");
+        }
+    }
